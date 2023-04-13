@@ -1,0 +1,69 @@
+$font28:1.75rem;
+$font26:1.625rem;
+$font22:1.375rem;
+$font18:1.125rem;
+$font14:0.875rem;
+$color1:#00a0e2;
+$color2:#ff3000;
+$color3:#222;
+$color4:#fff;
+$weight:700;
+
+// width:1200px;
+// big:width:500px;
+// small:width:150px;
+// right:calc
+main{
+    width:1200px;
+    margin:0 auto;
+    padding:150px 0 100px;
+    position:relative;
+    .path {
+        position:absolute; left:-30px; top:110px;
+        dd {
+            a {color:$color1;}
+            a em {font-weight:$weight;}
+            a::after {content:''; display:inline-block; background:url(../images/navigate_next.png)center no-repeat; width:35px; height:12px;}
+            a:last-child::after {display:none;}
+        }
+    } //e:path end
+    #order {
+        display:flex;
+        flex-flow:row nowrap;
+        justify-content:space-between;
+        .product_img {
+            width:500px;
+            .big {
+                img{width:100%;}
+            }
+            .tum {
+                display:flex;
+                flex-flow:row nowrap;
+                justify-content:space-between;
+                margin-top:15px;
+                a{display:inline-block; width:150px; img{width:100%;}}
+            }
+        }
+        .order_contents {
+            width:calc(100% - 550px); margin:30px;
+            h1 {font-size:$font28; font-weight:$weight;}
+            >p {margin:15px 0; del{font-size:$font22;}}
+            .price {font-size:$font26; font-weight:$weight; border-bottom:1px solid $color3; padding-bottom:25px;}
+            .deliver {em{font-weight:$weight;} span{margin-left:20px; color:$color3;}}
+            >h2 {font-size:$font22; font-weight:$weight;}
+            select {margin:10px 0; width:100%; padding:10px;}
+            .order_list {
+                border:1px solid $color3; border-left:none; border-right:none; display:grid; padding:10px 0; margin:20px 0; grid-template-areas:'product num cancel price'; grid-template-columns:1fr 50px 50px 150px; align-items:center;
+                .order_product {grid:'product'; p{font-size:$font14; line-height:1.5;}}
+                #order_num {grid:'num';}
+                #cancel {grid:'cancel';}
+                em {grid:'price'; text-align:right; font-weight:$weight; span{font-weight:$weight;}}
+            }
+            .total {
+                padding:0 0 15px;
+                h2 {font-size:$font18; font-weight:$weight;}
+            }
+            .btn {display:grid; grid-template-columns:repeat(3,32%); justify-content:space-between; button {img{width:100%;}}}
+        } //e:order_contents end 
+    } //e:order end
+}

@@ -1,0 +1,134 @@
+main {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 150px 0 100px;
+  position: relative;
+}
+main .path {
+  position: absolute;
+  left: -30px;
+  top: 110px;
+}
+main .path dd a {
+  color: #00a0e2;
+}
+main .path dd a em {
+  font-weight: 700;
+}
+main .path dd a::after {
+  content: "";
+  display: inline-block;
+  background: url(../images/navigate_next.png) center no-repeat;
+  width: 35px;
+  height: 12px;
+}
+main .path dd a:last-child::after {
+  display: none;
+}
+main #order {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+main #order .product_img {
+  width: 500px;
+}
+main #order .product_img .big img {
+  width: 100%;
+}
+main #order .product_img .tum {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+main #order .product_img .tum a {
+  display: inline-block;
+  width: 150px;
+}
+main #order .product_img .tum a img {
+  width: 100%;
+}
+main #order .order_contents {
+  width: calc(100% - 550px);
+  margin: 30px;
+}
+main #order .order_contents h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+main #order .order_contents > p {
+  margin: 15px 0;
+}
+main #order .order_contents > p del {
+  font-size: 1.375rem;
+}
+main #order .order_contents .price {
+  font-size: 1.625rem;
+  font-weight: 700;
+  border-bottom: 1px solid #222;
+  padding-bottom: 25px;
+}
+main #order .order_contents .deliver em {
+  font-weight: 700;
+}
+main #order .order_contents .deliver span {
+  margin-left: 20px;
+  color: #222;
+}
+main #order .order_contents > h2 {
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+main #order .order_contents select {
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+}
+main #order .order_contents .order_list {
+  border: 1px solid #222;
+  border-left: none;
+  border-right: none;
+  display: grid;
+  padding: 10px 0;
+  margin: 20px 0;
+  grid-template-areas: "product num cancel price";
+  grid-template-columns: 1fr 50px 50px 150px;
+  align-items: center;
+}
+main #order .order_contents .order_list .order_product {
+  grid: "product";
+}
+main #order .order_contents .order_list .order_product p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+main #order .order_contents .order_list #order_num {
+  grid: "num";
+}
+main #order .order_contents .order_list #cancel {
+  grid: "cancel";
+}
+main #order .order_contents .order_list em {
+  grid: "price";
+  text-align: right;
+  font-weight: 700;
+}
+main #order .order_contents .order_list em span {
+  font-weight: 700;
+}
+main #order .order_contents .total {
+  padding: 0 0 15px;
+}
+main #order .order_contents .total h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+main #order .order_contents .btn {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  justify-content: space-between;
+}
+main #order .order_contents .btn button img {
+  width: 100%;
+}/*# sourceMappingURL=product.css.map */
